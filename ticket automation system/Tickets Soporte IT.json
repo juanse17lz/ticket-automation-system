@@ -1,0 +1,281 @@
+{
+  "name": "Tickets Soporte IT",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "7b1299f5-4145-4095-bf45-0ab326236df8",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ea7781f1-f94c-45db-a602-1e0a7e53d52b",
+      "name": "Webhook",
+      "webhookId": "7b1299f5-4145-4095-bf45-0ab326236df8"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "62e9cc9c-7b8e-4944-9b4c-b1cd7698bff0",
+              "name": "id",
+              "value": "={{ $json.body.id }}",
+              "type": "string"
+            },
+            {
+              "id": "30964646-7b17-475b-b5cc-f13e1b2cd607",
+              "name": "nombre",
+              "value": "={{ $json.body.nombre }}",
+              "type": "string"
+            },
+            {
+              "id": "1c9cd719-c374-412d-aac9-736e144e59a7",
+              "name": "problema",
+              "value": "={{ $json.body.problema }}",
+              "type": "string"
+            },
+            {
+              "id": "a9229a30-21df-460d-8117-e36b40264f87",
+              "name": "prioridad",
+              "value": "={{ $json.body.prioridad }}",
+              "type": "string"
+            },
+            {
+              "id": "c05f209d-bf55-4574-a402-2200dbd391fe",
+              "name": "fecha",
+              "value": "={{ $json.body.fecha }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f32279d6-8f4d-4051-bc72-fa7d3f9f75a3",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Tujn8jAb_thft7BIEaYzne7nLKOFGq3DE-DGjlvmw5E",
+          "mode": "list",
+          "cachedResultName": "Tickets Soporte IT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Tujn8jAb_thft7BIEaYzne7nLKOFGq3DE-DGjlvmw5E/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "tickets",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Tujn8jAb_thft7BIEaYzne7nLKOFGq3DE-DGjlvmw5E/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.id }}",
+            "nombre": "={{ $json.nombre }}",
+            "problema": "={{ $json.problema }}",
+            "prioridad": "={{ $json.prioridad }}",
+            "fecha": "={{ $json.fecha }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "nombre",
+              "displayName": "nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "problema",
+              "displayName": "problema",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "prioridad",
+              "displayName": "prioridad",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        416,
+        0
+      ],
+      "id": "00257530-3079-4c6c-9014-769df0775ecb",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ZZQ1gFB4fYlTgwoG",
+          "name": "Google Sheets OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "81b44fe4-5509-4cee-a8c9-5c256c5c7a8d",
+              "leftValue": "={{ $json.prioridad }}",
+              "rightValue": "alta",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        624,
+        0
+      ],
+      "id": "0ddbc1c4-82e1-438b-90a4-576e8095f07a",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "sendTo": "juanse.user@gmail.com",
+        "subject": "Alerta Ticket",
+        "emailType": "text",
+        "message": "=Se creo un nuevo tickek:\nPrioridad: {{ $('Edit Fields').item.json.prioridad }}\nNombre error: {{ $('Edit Fields').item.json.nombre }}\nProblema: {{ $('Edit Fields').item.json.problema }}\nId: {{ $('Edit Fields').item.json.id }}\nFecha: {{ $('Edit Fields').item.json.fecha }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        816,
+        -144
+      ],
+      "id": "9f5cc9d8-8ed1-4bb4-8553-aa955e50d2f8",
+      "name": "Send a message",
+      "webhookId": "76758060-92d4-492e-8d38-c64a45ff83a7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "rdxQDYBC0yMr2VSV",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3eb5d330-93cd-453b-97e7-0c69931176f2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d97e04b3b404fe597f242ba39ae0fc61eb51a1877974f46f6fc5ed4974538038"
+  },
+  "id": "lMRO3LKxOlEqhkLt",
+  "tags": []
+}
