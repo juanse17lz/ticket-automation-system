@@ -1,0 +1,65 @@
+[
+    {
+        "id": "dc09e2f1",
+        "nombre": "Error 101",
+        "problema": "No carga la pagina",
+        "prioridad": "alta",
+        "fecha": "2026-04-28 16:07:44"
+    },
+    {
+        "id": "e04f4524",
+        "nombre": "Error 1441",
+        "problema": "Programa crashea al encender",
+        "prioridad": "alta",
+        "fecha": "2026-04-28 16:29:03"
+    },
+    {
+        "id": "a57e2c1d",
+        "nombre": "Error 1234",
+        "problema": "No me permite logearme en la aplicaccion",
+        "prioridad": "media",
+        "fecha": "2026-04-28 16:33:39"
+    },
+    {
+        "id": "e9076fa1",
+        "nombre": "Error 909",
+        "problema": "Error visual",
+        "prioridad": "baja",
+        "fecha": "2026-04-28 16:50:17"
+    },
+    {
+        "id": "dcb753ef",
+        "nombre": "Error 49",
+        "problema": "Error al abrir un url",
+        "prioridad": "media",
+        "fecha": "2026-04-28 17:31:18"
+    },
+    {
+        "id": "230d2b36",
+        "nombre": "Error 404",
+        "problema": "No carga la pagina",
+        "prioridad": "alta",
+        "fecha": "2026-04-29 22:21:03"
+    },
+    {
+        "id": "1ebea5dd",
+        "nombre": "Error 404",
+        "problema": "No carga pagina",
+        "prioridad": "alta",
+        "fecha": "2026-04-29 22:34:35"
+    },
+    {
+        "id": "077393e8",
+        "nombre": "Error 404",
+        "problema": "No carga pagina",
+        "prioridad": "alta",
+        "fecha": "2026-04-29 22:36:23"
+    },
+    {
+        "id": "9c9baecb",
+        "nombre": "Error 404",
+        "problema": "No carga la pagina",
+        "prioridad": "alta",
+        "fecha": "2026-04-29 22:41:25"
+    }
+]
