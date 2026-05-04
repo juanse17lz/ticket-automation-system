@@ -1,4 +1,4 @@
-# IT Ticket Automation System
+# Sistema de Automatización de Tickets IT
 
 ## 📌 Descripción
 Sistema de gestión de incidencias que permite registrar, organizar y automatizar tickets de soporte técnico.
