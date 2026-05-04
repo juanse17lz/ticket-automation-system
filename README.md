@@ -32,6 +32,17 @@ En el caso de los tickets de prioridad alta, el workflow ademas envia un mail pa
 5. El ticket se almacena en Google Sheets
 6. Si la prioridad es alta, se envía una notificación por email
 
+## 🎯 Caso de uso real
+
+Este sistema simula el flujo de trabajo de un equipo de soporte IT, donde:
+
+- Se registran incidencias técnicas
+- Se priorizan según criticidad
+- Se automatiza su almacenamiento
+- Se generan alertas para tickets críticos
+
+Esto permite optimizar tiempos de respuesta y mejorar la gestión operativa.
+
 ## 📸 Ejemplos
 ## 🔹 Creación de ticket en consola
 
