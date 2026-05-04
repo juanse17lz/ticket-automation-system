@@ -36,7 +36,7 @@ En el caso de los tickets de prioridad alta, el workflow ademas envia un mail pa
 ## 🔹 Creación de ticket en consola
 
 ![Ejemplo1](./Imagenes/Script_Ticket_Automation.png)
-![Ejemplo2](./Imagenes/Script_Ticket_Automation2.png)
+![Ejemplo2](./Imagenes/Script_Ticket_Automation_2.png)
 
 ## 🔹 Flujo Automatizado en n8n
 
