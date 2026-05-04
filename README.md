@@ -32,6 +32,20 @@ En el caso de los tickets de prioridad alta, el workflow ademas envia un mail pa
 5. El ticket se almacena en Google Sheets
 6. Si la prioridad es alta, se envía una notificación por email
 
+## 📸 Ejemplos
+## 🔹 Creación de ticket en consola
+
+![Ejemplo1](./Imagenes/Script_Ticket_Automation.png)
+![Ejemplo2](./Imagenes/Script_Ticket_Automation2.png)
+
+## 🔹 Flujo Automatizado en n8n
+
+![Flujo n8n](./Imagenes/Worflow_Ticket_Automation.png)
+
+## 📊 Registro en Google Sheets
+
+![Sheets](./Imagenes/GoogleSheet_Ticket_Automation.png)
+
 ## ▶️ Cómo usar
 git clone https://github.com/juanse17lz/Sistema_de_Automatizacion_de_Tickets_IT.git
 cd Sistema_de_Automatizacion_de_Tickets_IT
